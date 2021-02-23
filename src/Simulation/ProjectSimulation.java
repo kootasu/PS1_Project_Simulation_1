@@ -44,6 +44,7 @@ public class ProjectSimulation {
 
             // Time moves – hit enter
             iteration++;
+            System.out.println("\nPress enter to continue");
             String input = scanner.nextLine();
         }
     }

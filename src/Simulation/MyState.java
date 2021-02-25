@@ -6,6 +6,7 @@ public class MyState {
 
     private String name;
     private int timeFrame;
+    private int localTimeFrame;
     private double workEnergy;
     private ArrayList<MyState> inputs;
     private ArrayList<MyState> outputs;
@@ -13,6 +14,7 @@ public class MyState {
     public MyState(String name, int timeFrame) {
         this.name = name;
         this.timeFrame = timeFrame;
+        localTimeFrame = 0;
         workEnergy = 0;
         inputs = new ArrayList<>();
         outputs = new ArrayList<>();
@@ -24,6 +26,14 @@ public class MyState {
 
     public int getTimeFrame() {
         return timeFrame;
+    }
+
+    public int getLocalTimeFrame() {
+        return localTimeFrame;
+    }
+
+    public void setLocalTimeFrame(int localTimeFrame) {
+        this.localTimeFrame = localTimeFrame;
     }
 
     public double getWorkEnergy() {

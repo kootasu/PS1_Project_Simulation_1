@@ -5,6 +5,8 @@ import java.util.ArrayList;
 
 public class MyStateCreator {
 
+    // TODO: Make more generic. Should be easy to use different states to simulate different projects
+
     public static ArrayList<MyState> createMyStateArrayList() {
         ArrayList<MyState> myStateArrayList = new ArrayList<>();
 

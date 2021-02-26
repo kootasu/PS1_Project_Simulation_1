@@ -1,11 +1,14 @@
 package Simulation;
 
+import javax.sound.sampled.LineUnavailableException;
+import javax.sound.sampled.UnsupportedAudioFileException;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class BetterProjectSimulation {
 
-    public void simulateProject(){
+    public void simulateProject() throws UnsupportedAudioFileException, IOException, LineUnavailableException {
         ArrayList<MyState> myStateArrayList = MyStateCreator.createMyStateArrayList();
         Scanner scanner = new Scanner(System.in);
         int iteration = 0;
@@ -54,6 +57,7 @@ public class BetterProjectSimulation {
             iteration++;
             System.out.println("\nPress enter to continue");
             String input = scanner.nextLine();
+            AudioPlayer.play("audio/345299__scrampunk__okay.wav");
         }
     }
 }

@@ -7,6 +7,10 @@ public class MyStateCreator {
 
     // TODO: Make more generic. Should be easy to use different states to simulate different projects
 
+    /**
+     * Crudely creates states to use in simulation
+     * @return
+     */
     public static ArrayList<MyState> createMyStateArrayList() {
         ArrayList<MyState> myStateArrayList = new ArrayList<>();
 
@@ -38,20 +42,5 @@ public class MyStateCreator {
         myStateArrayList.get(3).getOutputs().add(myStateArrayList.get(4));
 
         return myStateArrayList;
-    }
-
-    public void showMyStateInfo() {
-        ArrayList<MyState> myStateArrayList = createMyStateArrayList();
-        for (MyState myState : myStateArrayList) {
-            System.out.println("State: " + myState.getName() + "\n" +
-                    "Timeframe: " + myState.getTimeFrame());
-            for (MyState input : myState.getInputs()) {
-                System.out.print("Input: " + input.getName() + "\n");
-            }
-            for (MyState output : myState.getOutputs()) {
-                System.out.print("Output: " + output.getName() + "\n");
-            }
-            System.out.println();
-        }
     }
 }
